@@ -1,22 +1,40 @@
 .welcome_rbw {
-  color: black;
+  color: white;
   text-transform: uppercase;
   display: inline-block;
   margin-top: 4px;
-  margin-left: 204px;
+  margin-left: 350px;
   font-size: 30px;
 }
 
+.top {
+  background-color: #657383;
+}
+
 body {
+  background-color: #AFDCEC;
   font-family: 'Roboto', sans-serif;
 }
- .rapha {
-   color: black !important;
+ .index_button {
+   color: white !important;
+   font-family: 'Roboto', sans-serif;
+   font-size: 20px
  }
 
 .jumbotron{
-  background:url("/img/robot_world.jpg");
+  background:url("/img/homepage.jpg");
   background-position: center center;
   background-size: cover;
-  height: 600px;
+  background-repeat: no-repeat;
+  height: 900px;
+}
+
+.ScndJTron {
+  background:url("/img/all_robots.jpg") !important;
+  background-position: center;
+  background-size: 50px no-repeat;
+  height: 700px;
+  text-align: center;
+  font-size: 30px;
+  font-style: bold;
 }

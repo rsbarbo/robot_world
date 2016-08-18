@@ -5,8 +5,17 @@ class RobotWorldApp < Sinatra::Base
     erb :dashboard
   end
 
-  get '/skills' do
+  get '/robots' do
+    # @robot = robot_world_db.all
     erb :index
+  end
+
+  get '/robots/new' do
+    erb :new
+  end
+
+  def robot_world_db
+    @database ||= YAML::Store.new("db/robotworlddb")
   end
 
 end
