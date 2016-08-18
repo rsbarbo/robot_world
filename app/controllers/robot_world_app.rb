@@ -1,3 +1,4 @@
+require "pry"
 class RobotWorldApp < Sinatra::Base
   set :root, File.join(File.dirname(__FILE__), '..')
 

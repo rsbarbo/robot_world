@@ -6,20 +6,15 @@
 
         <% @robots.each do |robot| %>
         <tr>
-
           <td><%= robot.id%>:</td>
           <td><a href="/robots/<%= robot.id %>"><%= robot.name %></a></td>
-
           <td>
             <a href="/robots/<%= robot.id %>/edit">Edit Robot</a>
-
             <form action="/robots/<%= robot.id %>" method="POST">
               <input type="hidden" name="_method" value="DELETE">
               <input type="submit" value="Delete Robot" />
             </form>
-
           </td>
-
         </tr>
         <% end %>
       </table>

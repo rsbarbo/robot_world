@@ -1,5 +1,10 @@
+
+
+
+
 require 'yaml/store'
 require 'time'
+require "pry"
 
 class RobotWorld
   attr_reader :database
@@ -62,6 +67,7 @@ class RobotWorld
     end
 
   def average_age
+    binding.pry
     current_year = Time.new.year
     ages = raw_robots.map do |robot|
       current_year - Time.parse(robot["birthdate"]).year
