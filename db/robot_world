@@ -1,0 +1,11 @@
+---
+robots:
+- id: 1
+  name: Raphael
+  city: Santos
+  state: Sao Paulo
+  avatar: Rapha
+  birthdate: 05/28/1984
+  date_hired: 08/16/2016
+  department: SALES
+total: 1

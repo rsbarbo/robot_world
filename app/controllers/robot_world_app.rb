@@ -14,7 +14,7 @@ class RobotWorldApp < Sinatra::Base
     erb :index
   end
 
-  get '/robots/dashboard' do
+  get '/dashboard' do
     @average_age = robot_world.average_age
     @hired_by_year = robot_world.hired_by_year
     @department_count = robot_world.department_count
@@ -58,7 +58,6 @@ class RobotWorldApp < Sinatra::Base
     else
       database = YAML::Store.new('db/robot_world')
     end
-    database.results_as_hash = true
     @robot_world ||= RobotWorld.new(database)
   end
 

@@ -20,13 +20,15 @@ body {
    margin-top: 16px;
 
    font-family: 'Roboto', sans-serif;
-   font-size: 30px
+   font-size: 30px;
+   font-style: italic;
  }
 
  .index_button_left {
    color: white !important;
  }
 
+/*def the background and additional info for the homepage*/
 .jumbotron{
   background:url("/img/homepage.jpg");
   background-position: center center;
@@ -35,6 +37,7 @@ body {
   height: 900px;
 }
 
+/*def background for all the pages*/
 .ScndJTron {
   background:url("/img/all_robots.jpg");
   background-size: cover;
@@ -49,7 +52,14 @@ body {
   font-style: bold;
 }
 
+/*display average on dashboard*/
 .average {
   text-align: justify;
-  font-size: 40px;
+  font-size: 35px;
+}
+
+/*format the sub_title for index*/
+.sub_title {
+  text-align: center;
+  font-size: 50px;
 }
