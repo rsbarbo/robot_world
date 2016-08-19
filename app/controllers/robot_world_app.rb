@@ -5,4 +5,22 @@ class RobotWorldApp < Sinatra::Base
     erb :home
   end
 
+  get '/dashboard' do
+    erb :dashboard
+  end
+
+  get '/robots' do
+    @robots = robot_world.all
+  end
+
+  def robot_world
+    if ENV['RACK_ENV'] == "test"
+      database = SQLite3::Database.new("db/robot_manager_test.db")
+    else
+      database = SQLite3::Database.new("db/robot_manager_development.db")
+    end
+    database.results_as_hash = true
+    RobotWorld.new(database)
+  end
+
 end
