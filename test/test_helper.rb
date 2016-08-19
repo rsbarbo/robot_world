@@ -1,27 +1,28 @@
-ENV['RACK_ENV'] ||= 'test'
+ENV["RACK_ENV"] = "test"
 
-require File.expand_path('../../config/environment', __FILE__)
-
-require 'minitest/autorun'
-require 'minitest/pride'
-require 'capybara/dsl'
-require 'launchy'
+require File.expand_path("../../config/environment", __FILE__)
+require "minitest/autorun"
+require "minitest/pride"
+require "capybara/DSL"
 
 module TestHelpers
+
   def teardown
-    robot_world.delete_all
+    robot_manager.delete_all
     super
   end
 
-  def robot_world
-    database = YAML::Store.new('db/robot_world_test')
-    @database ||= RobotWorld.new(database)
+  def robot_manager
+    database = SQLite3::Database.new("db/robot_manager_test.db")
+    database.results_as_hash = true
+    RobotWorld.new(database)
   end
-end
 
-Capybara.app = RobotWorldApp
+  Capybara.app = RobotWorldApp
 
-class FeatureTest < Minitest::Test
-  include Capybara::DSL
-  include TestHelpers
+  class FeatureTest < Minitest::Test
+    include Capybara::DSL
+    include TestHelpers
+  end
+
 end

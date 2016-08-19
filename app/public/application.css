@@ -21,7 +21,6 @@ body {
 
    font-family: 'Roboto', sans-serif;
    font-size: 30px;
-   font-style: italic;
  }
 
  .index_button_left {
@@ -34,7 +33,7 @@ body {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 900px;
+  height: 950px;
 }
 
 /*def background for all the pages*/

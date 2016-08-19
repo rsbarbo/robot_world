@@ -12,7 +12,7 @@ Dir.glob(File.join(APP_ROOT, "app", "models", "*.rb")).each { |file| require fil
 
 #it requires all the folders so you do not need to require all of them within
 #the files itself
-class TaskManagerApp < Sinatra::Base
+class RobotWorldApp < Sinatra::Base
   set :method_override, true
   set :root, APP_ROOT
   set :views, File.join(APP_ROOT, "app", "views")
