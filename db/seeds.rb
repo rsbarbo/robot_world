@@ -2,16 +2,14 @@ require 'sqlite3'
 
 database = SQLite3::Database.new("db/robot_manager_development.db")
 
-#delete current existent records from robot table before inserting new records;
-#we start from the scratch
 database.execute("DELETE FROM robots")
 
-#Insert new records to the database
-database.execute("INSERT INTO robots (title, description) VALUES
-                  ('R1', 'AWESOME ROBOT'),
-                  ('R2', 'AMAZING ROBOT');"
-                 )
+database.execute("INSERT INTO robots
+                  (name, city, state, avatar, birthdate, date_hired, department)
+                  VALUES
+                  ('Robot1', 'Santos', 'SP', '1', '5/29/1984', '8/10/2016', 'Vendas'),
+                  ('Robot2', 'Denver', 'CO', '2', '5/28/1984', '8/01/2016', 'Sales');"
+                )
 
-#Make sure data has actually been added to the database
-puts "Data has been added to the database and:"
+puts "It worked and:"
 p database.execute("SELECT * FROM robots;")
