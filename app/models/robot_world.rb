@@ -58,4 +58,9 @@ class RobotWorld
     ages.reduce(:+)/ages.length
   end
 
+  #need to delete this method once all the addiitonal stats are created
+  def additional_stats
+    p "needs to add stats"
+  end
+
 end

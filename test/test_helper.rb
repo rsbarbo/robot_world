@@ -3,7 +3,7 @@ ENV["RACK_ENV"] = "test"
 require File.expand_path("../../config/environment", __FILE__)
 require "minitest/autorun"
 require "minitest/pride"
-require "capybara/DSL"
+require 'capybara/dsl'
 
 module TestHelpers
 
@@ -12,17 +12,18 @@ module TestHelpers
     super
   end
 
+  # test/test_helper.rb
   def robot_manager
     database = SQLite3::Database.new("db/robot_manager_test.db")
     database.results_as_hash = true
     RobotWorld.new(database)
   end
 
-  Capybara.app = RobotWorldApp
+end
 
-  class FeatureTest < Minitest::Test
-    include Capybara::DSL
-    include TestHelpers
-  end
+Capybara.app = RobotWorldApp
 
+class FeatureTest < Minitest::Test
+  include Capybara::DSL
+  include TestHelpers
 end
