@@ -62,3 +62,15 @@ body {
   text-align: center;
   font-size: 50px;
 }
+
+/*Formatting the header for Robot New*/
+.new-robot{
+  font-size: 40px !important;
+}
+
+/*Formatting the info being display for robots*/
+.displaying {
+  font-size: 35px !important;
+  color: #657383;
+  text-align: right;
+}

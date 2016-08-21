@@ -1,0 +1,11 @@
+<div class="jumbotron ScndJTron">
+
+  <div>
+    <form action="/tasks/<%= @task.id %>" method="POST">
+      <input type="hidden" name="_method" value="PUT" /></br>
+      <input style="width: 300px" type="text" name="task[title]" value="<%= @task.title %>" /></br>
+      <textarea style="width: 300px"  name="task[description]" /><%= @task.description %></textarea></br>
+      <input type="submit" />
+    </form>
+
+  </div>
