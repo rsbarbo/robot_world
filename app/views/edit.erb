@@ -1,11 +1,18 @@
 <div class="jumbotron ScndJTron">
+  <div class="container">
 
-  <div>
-    <form action="/tasks/<%= @task.id %>" method="POST">
-      <input type="hidden" name="_method" value="PUT" /></br>
-      <input style="width: 300px" type="text" name="task[title]" value="<%= @task.title %>" /></br>
-      <textarea style="width: 300px"  name="task[description]" /><%= @task.description %></textarea></br>
-      <input type="submit" />
-    </form>
+    <form class="form-horizontal" action="/robots/<%= @robot.id %>" method="post" >
+      <p class="text-center new-robot"><b>Edit <%= @robot.name %>:</b></p>
+      <input class="form-control" type="hidden" name="_method" value="put" />
+      <input class="form-control" type="text" name="robot[name]" value="<%= @robot.name %>" />Name</br>
+      <input class="form-control" type="text" name="robot[city]" value="<%= @robot.city %>" />City</br>
+      <input class="form-control" type="text" name="robot[state]" value="<%= @robot.state %>" />State</br>
+      <input class="form-control" type="text" name="robot[avatar]" value="<%= @robot.avatar %>" />Avatar</br>
+      <input class="form-control" type="text" name="robot[birthdate]" value="<%= @robot.birthdate %>" />Birthdate (yyyy-mm-dd)</br>
+      <input class="form-control" type="text" name="robot[date_hired]" value="<%= @robot.date_hired %>" />Date Hired</br>
+      <input class="form-control" type="text" name="robot[department]" value="<%= @robot.department %>" />Department</br>
+      <input class="btn btn-primary" type="submit" value="Submit" />
+    </div>
 
   </div>
+</div>

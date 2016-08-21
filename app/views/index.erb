@@ -14,12 +14,13 @@
         <img class="media-object" src="<%= robot.avatar %>" alt="...">
 
         <hr>
-        <h4 id="index-robot-name">
-          <a href="/robots/<%= robot.id %>"><%= robot.name %></a></h4>
+        <h1 id="index-robot-name">
+          <a href="/robots/<%= robot.id %>"><%= robot.name %></a></h1>
 
           <div class="btn-group btn-group-xs edit-delete" role="group" aria-label="...">
             <button type"button" class="edit-delete-btn">
-              <a href="/robots/<%= robot.id %>/edit"><i class"glyphicon glyphicon-edit"></i></a>
+              <a href="/robots/<%= robot.id %>/edit" class"glyphicon glyphicon-edit">Edit</a>
+
             </button>
           </div>
 
