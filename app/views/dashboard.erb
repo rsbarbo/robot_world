@@ -1,9 +1,25 @@
 <div class="jumbotron ScndJTron">
   <div class="average">
-    &#9733; Average Robot Age: <%= @average_age %></br>
-    &#9733; Robots Hired by Year: <%= @hired_by_year %></br>
-    &#9733; Robots By Department: <%= @department_count %></br>
-    &#9733; Robots By City: <%= @city_count %></br>
-    &#9733; Robots By State: <%= @state_count %></br>
- </div>
+    <h1 align="center">STATISTICS</h1>
+    <table  class="table table-striped">
+      <tr>
+        <th>Total Number of Robots</th>
+        <th>Average Robot Age</th>
+      </tr>
+      <tr>
+        <td><%= robot_world.all.count %></td>
+        <td><%= robot_world.average_age %></td>
+      </tr>
+
+      <tr>
+        <th>Something</th>
+        <th>Something else</th>
+      </tr>
+      <tr>
+        <td><%= robot_world.all.count %></td>
+        <td><%= robot_world.average_age %></td>
+      </tr>
+
+    </table>
+  </div>
 </div>

@@ -1,58 +1,17 @@
 <div class="jumbotron ScndJTron">
-  <div class="form-group col-md-10">
-    <h2>Create a new robot:</h2>
 
-    <form class="form-horizontal" action="/robots" method="post">
-      <div class="form-group">
-        <label class="col-sm-7 control-label">Name</label>
-        <div class="col-sm-5">
-          <input type="text" name='robot[name]' placeholder="Name"/>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="col-sm-7 control-label">City</label>
-        <div class="col-sm-5">
-          <input type="text" name='robot[city]' placeholder="City" />
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="col-sm-7 control-label">State</label>
-        <div class="col-sm-5">
-          <input type="text" name='robot[state]' placeholder="State" />
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="col-sm-7 control-label">Avatar</label>
-        <div class="col-sm-5">
-          <input type="text" name='robot[avatar]' placeholder="Avatar" />
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="col-sm-7 control-label">Birthdate</label>
-        <div class="col-sm-5">
-          <input type="text" name='robot[birthdate]' placeholder="Birthdate" />
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="col-sm-7 control-label">Date Hired</label>
-        <div class="col-sm-5">
-          <input type="text" name='robot[date_hired]' placeholder="Date Hired" />
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="col-sm-7 control-label">Department</label>
-        <div class="col-sm-5">
-          <input type="text" name='robot[department]' placeholder="Department" />
-        </div>
-      </div>
-
-      <input class="btn" type="submit" />
+  <div class="container">
+    <form action="/robots" class="form-horizontal" method="post">
+      <p class="text-left">Enter a new robot:</p>
+      <input type='text' class="form-control" name='robot[name]' placeholder="name"/>NAME<br/>
+      <input type='text' class="form-control" name='robot[city]' placeholder="city"/>CITY<br/>
+      <input type='text' class="form-control" name='robot[state]' placeholder="state"/>STATE<br/>
+      <input type='text' class="form-control" name='robot[avatar]' placeholder="avatar"/>AVATAR<br/>
+      <input type='text' class="form-control" name='robot[birthdate]' placeholder="birthdate"/>BIRTHDATE<br/>
+      <input type='text' class="form-control" name='robot[date_hired]' placeholder="date_hired"/>DATA HIRED<br/>
+      <input type='text' class="form-control" name='robot[department]' placeholder="department"/>DEPARTMENT<br/>
+      <input class="btn btn-primary" type="submit" value="Submit">
     </form>
   </div>
+
 </div>
